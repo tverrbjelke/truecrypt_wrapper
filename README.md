@@ -1,43 +1,26 @@
-TrueCrypt Leaking
-=================
-
-**With using TrueCrypt your system leaks and bookmarks 
-your recently used containers!**
-
-The bookmarking happens normally inside this xml file:
-
-    $HOME/.local/share/recently-used.xbel
-
-An attacker with access to your home folder (physically or via network) 
-could use the recently-used file to easily **see where your
-TrueCrypt containers are**, and thus you
-    
-1. **spoil any plausible deniability**
-
-2. **present where your precious encrypted containers are**
-
-
 Truecrypt Wrapper Script
 ========================
 
-This open source bash script
+This bash script
 [truecrypt_wrapper.sh](https://github.com/tverrbjelke/truecrypt_wrapper) 
-is a workaround for TrueCrypt on linux.
-In my blog I [describe](http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html) 
-the serious security problem of TrueCrypt that it helps against.
+is a [workaround]((http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html) for one major security issue with TrueCrypt on linux.
 
-Just start this wrapper-script instead of the normal TrueCrypt binary.
-(E.g. put a desktop icon and menu-entry linking to this script).
+Put it e.g. into your ` ~/bin/` folder and make it executable.
+Then just start this wrapper-script instead of the normal TrueCrypt binary
+(E.g. create a desktop icon or menu-entry linking to this script).
 
 Optionally you may give your recently-used.xbel file as argument.
 
 Also do not forget to establish this workflow:
 
 1. Start truecrypt_wrapper.sh
-2. Mount container files.
+2. Select and mount container files.
 3. Work with container.
 4. Unmount everything inside TrueCrypt.
 5. Close TrueCrypt (and let the wrapper do the cleanup).
+
+This all is published for no better reason under the GPL3, 
+I think it should be adequate. 
 
 
 Spread the news!
@@ -64,12 +47,12 @@ It does these steps:
 5. Restore official clean recently-used file.
 
 
-
 Caveats
 =======
 
 While you work with your mounted container, 
-you work with a temporary recently-used file.
+you work with a temporary recently-used file 
+where the bookmarking still is done.
 That will get wiped/deleted after you close TrueCrypt.
 
 So keep in mind:
@@ -99,6 +82,4 @@ and they even cannot see that,
 because on next start the script removes them...
 
 So I ask you: What do you think, how to adress this - properly? 
-
-See http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html and https://github.com/tverrbjelke/truecrypt_wrapper
-
+For more details and maybe further disqussion see my blog article http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html and https://github.com/tverrbjelke/truecrypt_wrapper
