@@ -83,3 +83,8 @@ because on next start the script removes them...
 
 So I ask you: What do you think, how to adress this - properly? 
 For more details and maybe further disqussion see my blog article http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html and https://github.com/tverrbjelke/truecrypt_wrapper
+
+License
+=======
+
+Copyright (c) 2011-2013 tverrbjelke. See the LICENSE.txt file for license rights and limitations (GPL3).
