@@ -1,10 +1,30 @@
+TrueCrypt Leaking
+=================
+
+**With using TrueCrypt your system leaks and bookmarks 
+your recently used containers!**
+
+The bookmarking happens normally inside this xml file:
+
+    $HOME/.local/share/recently-used.xbel
+
+An attacker with access to your home folder (physically or via network) 
+could use the recently-used file to easily **see where your
+TrueCrypt containers are**, and thus you
+    
+1. **spoil any plausible deniability**
+
+2. **present where your precious encrypted containers are**
+
+
 Truecrypt Wrapper Script
 ========================
 
 This open source bash script
 [truecrypt_wrapper.sh](https://github.com/tverrbjelke/truecrypt_wrapper) 
-is a workaround for TrueCrypt on linux,
-helping against the described serious security problem of TrueCrypt.
+is a workaround for TrueCrypt on linux.
+In my blog I [describe](http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html) 
+the serious security problem of TrueCrypt that it helps against.
 
 Just start this wrapper-script instead of the normal TrueCrypt binary.
 (E.g. put a desktop icon and menu-entry linking to this script).
