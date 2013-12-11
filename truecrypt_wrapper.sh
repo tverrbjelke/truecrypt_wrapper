@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # 
-#for problem see http://www.kubuntuforums.net/showthread.php?56255-Clearing-out-quot-Recently-Used-quot-tab-in-TrueCrypt
-
+#from https://github.com/tverrbjelke/truecrypt_wrapper
 
 #default xbel or manuel via argument?
 if [[ "$1" == "" ]]
