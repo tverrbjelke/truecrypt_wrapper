@@ -3,10 +3,10 @@ Truecrypt Wrapper Script
 
 This bash script
 [truecrypt_wrapper.sh](https://github.com/tverrbjelke/truecrypt_wrapper) 
-is a [workaround]((http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html) for one major security issue with TrueCrypt on linux.
+is a [workaround]((http://querbalken.net/workaround-truecrypt-leaking-containers-security-issue-en.html) for one major security issue with TrueCrypt on linux. 
 
 Put it e.g. into your ` ~/bin/` folder and make it executable.
-Then just start this wrapper-script instead of the normal TrueCrypt binary
+Then just use this wrapper-script instead of the normal TrueCrypt binary
 (E.g. create a desktop icon or menu-entry linking to this script).
 
 Optionally you may give your recently-used.xbel file as argument.
@@ -21,6 +21,10 @@ Also do not forget to establish this workflow:
 
 This all is published for no better reason under the GPL3, 
 I think it should be adequate. 
+
+This script was inspired by [How To: Cover you tracks with truecrypt in gnome](http://ubuntuforums.org/showthread.php?t=909772). 
+I not only want to see it hide in a forum and age. 
+Instead lets do a next step and make it an open source project so everyone can colaborate at this issue.
 
 
 Spread the news!
@@ -47,13 +51,14 @@ It does these steps:
 5. Restore official clean recently-used file.
 
 
+
 Caveats
 =======
 
 While you work with your mounted container, 
-you work with a temporary recently-used file 
-where the bookmarking still is done.
-That will get wiped/deleted after you close TrueCrypt.
+you work with a temporary recently-used file, 
+where the bookmarking is still done.
+That will get wiped/deleted after you unmount containers and close TrueCrypt.
 
 So keep in mind:
 
